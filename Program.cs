@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Title;
+using Command;
 
 namespace Title
 {
 	class Title1
 	{
-
 		public static string title = "Welcome to: Todo List";
 		public static string nameTitle = "By: RYAN | CLI - DEV";
 
@@ -43,6 +43,20 @@ namespace Title
 	}
 }
 
+public class SecondTimer 
+{
+	public static async Task Timer() 
+	{
+		Console.WriteLine("Enter Timer Minutes: ");
+		int timerSet = Int32.Parse(Console.ReadLine());
+		Thread.Sleep(int.Parse(timerSet.ToString()));
+
+		Console.WriteLine($"Timer of: {timerSet} Minutes - is Done");
+		Console.ReadLine();
+		await Task.Delay(2000);
+	}	
+}
+
 
 
 namespace Program
@@ -52,13 +66,16 @@ namespace Program
 	{
 		
 		public static bool isReady = false;
-		public static void Main(string[] args)
+		public static async void Main(string[] args)
 		{
 
 			Title1.GotMessage();
 
+
+
 			Console.WriteLine("Enter Name: ");
 			string? name = Console.ReadLine();
+
 
 			bool isReady = name == "";
 			if (isReady)
@@ -70,6 +87,21 @@ namespace Program
 			else
 			{
 
+				Console.WriteLine("Enter Command: ");
+				Command.Cmmd.commands = Console.ReadLine();
+				string commandsOne = "/Todo";
+				string commandTwo = "/";
+
+
+				if (Command.Cmmd.commands.Equals("/Todos")) {
+
+					await Command.Cmmd.listCommands(commandsOne);
+					await Command.Cmmd.listCommands(commandTwo);
+
+					await Command.Cmmd.Commands();
+				}
+
+
 				Console.WriteLine("Please Enter Todo One: ");
 
 				string? todoOne = Console.ReadLine();
@@ -79,6 +111,7 @@ namespace Program
 				string? todoTwo = Console.ReadLine();
 				Title1.GetTodos(todoTwo);
 			}
+
 
 			Console.ReadLine();
 
