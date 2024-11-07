@@ -4,6 +4,8 @@ using Title;
 using Command;
 using RandomCommands;
 using Todo;
+using Math;
+
 
 namespace Title
 {
@@ -94,13 +96,47 @@ namespace Program
 				string commandsOne = "/Todo";
 				string commandTwo = "/";
 
+				if (Command.Cmmd.commands.Equals("/Math")) {
+
+					byte num1 = GetMath.MathProblem.Nums(1, 10);
+					byte num2 = GetMath.MathProblem.Nums(2, 10);
+
+					Maths.GetMaths(num1, num2);
+
+			
+
+					string op = Maths.Opertor();
+
+					Console.WriteLine($"What is: {num1} {op} {num2}");
+					Console.WriteLine();
+
+					byte answer = byte.Parse(Console.ReadLine());
+
+					
+
+					if (op.Equals("+") && answer == AddMath.Add.AddNums(num1, num2))
+					{
+						Console.WriteLine($"Correct: {num1} + {num2} = {num1 + num2}");
+						Console.ReadLine();
+					}
+
+					if (op.Equals("-") && answer == SubNum.Sub.SubNums(num1, num2)) {
+
+						Console.WriteLine($"Correct: {num1} + {num2} = {num1 - num2}");
+						Console.ReadLine();
+
+					}
+
+
+				}
+
 
 				if (Command.Cmmd.commands.Equals("/Todos")) {
 
-					Command.Cmmd.listCommands(commandsOne);
-					Command.Cmmd.listCommands(commandTwo);
+					_ = Command.Cmmd.listCommands(commandsOne);
+					_ = Command.Cmmd.listCommands(commandTwo);
 
-					Command.Cmmd.Commands();
+					_ = Command.Cmmd.Commands();
 				}
 
 				if (Command.Cmmd.commands.Equals("/cmd")) {
@@ -115,6 +151,7 @@ namespace Program
 					Todo.Todos.getTodosMixed();
 					todos.setTodosX(Todo.Todos.todoOne);
 					todos.setTodoY(Todos.todoOne);
+
 
 				}
 			}
