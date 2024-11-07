@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Title;
 using Command;
 using RandomCommands;
+using Todo;
 
 namespace Title
 {
@@ -104,14 +105,17 @@ namespace Program
 
 				if (Command.Cmmd.commands.Equals("/cmd")) {
 					RandCommand m;
-						
 
-					Console.WriteLine("Please Enter Todo One: ");
+					Console.WriteLine("Enter Todo 1: ");
+					Todos.todoOne = Console.ReadLine();
 
-					string? todoOne = Console.ReadLine();
-					Console.WriteLine("Please Enter Todo Two: ");
-					string? todoTwo = Console.ReadLine();
-                    _ = RandCommand.RandonCommand(todoOne, todoTwo);
+					Console.WriteLine("Enter Todo 2: ");
+					Todos.todoTwo = Console.ReadLine();
+					Todo.Todos todos = new Todos();
+					Todo.Todos.getTodosMixed();
+					todos.setTodosX(Todo.Todos.todoOne);
+					todos.setTodoY(Todos.todoOne);
+
 				}
 			}
 
