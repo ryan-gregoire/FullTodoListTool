@@ -1,0 +1,14 @@
+C:\Users\Ryan\Desktop\Website\bin\Debug\net9.0\Website.exe
+C:\Users\Ryan\Desktop\Website\bin\Debug\net9.0\Website.deps.json
+C:\Users\Ryan\Desktop\Website\bin\Debug\net9.0\Website.runtimeconfig.json
+C:\Users\Ryan\Desktop\Website\bin\Debug\net9.0\Website.dll
+C:\Users\Ryan\Desktop\Website\bin\Debug\net9.0\Website.pdb
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.AssemblyInfoInputs.cache
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.AssemblyInfo.cs
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.dll
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\refint\Website.dll
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.pdb
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\Website.genruntimeconfig.cache
+C:\Users\Ryan\Desktop\Website\obj\Debug\net9.0\ref\Website.dll
