@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Title;
 using Command;
+using RandomCommands;
 
 namespace Title
 {
@@ -66,7 +67,7 @@ namespace Program
 	{
 		
 		public static bool isReady = false;
-		public static async void Main(string[] args)
+		public static void Main(string[] args)
 		{
 
 			Title1.GotMessage();
@@ -95,21 +96,23 @@ namespace Program
 
 				if (Command.Cmmd.commands.Equals("/Todos")) {
 
-					await Command.Cmmd.listCommands(commandsOne);
-					await Command.Cmmd.listCommands(commandTwo);
+					Command.Cmmd.listCommands(commandsOne);
+					Command.Cmmd.listCommands(commandTwo);
 
-					await Command.Cmmd.Commands();
+					Command.Cmmd.Commands();
 				}
 
+				if (Command.Cmmd.commands.Equals("/cmd")) {
+					RandCommand m;
+						
 
-				Console.WriteLine("Please Enter Todo One: ");
+					Console.WriteLine("Please Enter Todo One: ");
 
-				string? todoOne = Console.ReadLine();
-				Title1.GetTodos(todoOne);
-
-				Console.WriteLine("Please Enter Todo Two: ");
-				string? todoTwo = Console.ReadLine();
-				Title1.GetTodos(todoTwo);
+					string? todoOne = Console.ReadLine();
+					Console.WriteLine("Please Enter Todo Two: ");
+					string? todoTwo = Console.ReadLine();
+                    _ = RandCommand.RandonCommand(todoOne, todoTwo);
+				}
 			}
 
 
