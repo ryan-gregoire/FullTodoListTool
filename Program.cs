@@ -110,7 +110,7 @@ namespace Program
 					Console.WriteLine($"What is: {num1} {op} {num2}");
 					Console.WriteLine();
 
-					byte answer = byte.Parse(Console.ReadLine());
+					byte? answer = byte.Parse(Console.ReadLine());
 
 					
 
@@ -123,6 +123,24 @@ namespace Program
 					if (op.Equals("-") && answer == SubNum.Sub.SubNums(num1, num2)) {
 
 						Console.WriteLine($"Correct: {num1} + {num2} = {num1 - num2}");
+						Console.ReadLine();
+
+					}
+					if (op.Equals("-") && answer == SubNum.Sub.SubNums(num1, num2)) {
+
+						Console.WriteLine($"Correct: {num1} - {num2} = {num1 - num2}");
+						Console.ReadLine();
+
+					}
+					if (op.Equals("*") && answer ==MulNum.Mul.MulNums(num1, num2)) {
+
+						Console.WriteLine($"Correct: {num1} * {num2} = {num1 * num2}");
+						Console.ReadLine();
+
+					}
+					if (op.Equals("/") && answer == DivNum.Div.DivNums(num1, num2)) {
+
+						Console.WriteLine($"Correct: {num1} / {num2} = {num1 / num2}");
 						Console.ReadLine();
 
 					}
@@ -152,6 +170,30 @@ namespace Program
 					todos.setTodosX(Todo.Todos.todoOne);
 					todos.setTodoY(Todos.todoOne);
 
+
+				} 
+				
+				else if (Command.Cmmd.commands.Equals("/TL")) {
+					Console.WriteLine("Enter Your Framework: ");
+					string? framework = Console.ReadLine();
+
+					ProjectExample.ProjectTodoList.SetFramework(framework);
+
+					Console.WriteLine("Enter And Pick a CSS Library: ");
+					string?
+					 cssLib = Console.ReadLine();
+					ProjectExample.ProjectTodoList.SetCSSLibrary(cssLib);
+
+
+					Console.WriteLine("Enter Programming Language: ");
+					string? langauage = Console.ReadLine();
+
+					ProjectExample.ProjectTodoList.SetProgrammingLanguage(langauage);
+
+					Console.WriteLine("Enter a Name of a Testing Framework: ");
+					string? testingLang = Console.ReadLine();
+
+					ProjectExample.ProjectTodoList.SetTestingLanguage(testingLang);
 
 				}
 			}
